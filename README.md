@@ -1,1 +1,3 @@
-semantic level tokens are stored here
+• avatar (ready)
+• image gallery (coming soon)
+• video player (coming soon)
