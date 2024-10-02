@@ -3,138 +3,89 @@
     "id": "3c66d2114616969fba7a2041773756ca8ceba0ed",
     "name": "base",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "enabled"
-    }
+    "selectedTokenSets": {}
   },
   {
     "id": "94ffc2164696226431cf09784cb96537b6246af1",
     "name": "smc-reference",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-colors/light": "source",
-      "smc-reference/smc-reference": "enabled"
-    }
+    "selectedTokenSets": {}
   },
   {
     "id": "d1d3d9cb80725aa1ac27bdd575fc828d8aa60252",
     "name": "light",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-colors/light": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "smc-colors"
   },
   {
     "id": "5274e541af355daf618ee85a455f8a75b8ee807b",
     "name": "dark",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-colors/dark": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "smc-colors"
   },
   {
     "id": "d0c88fc446022cc4e9575d7b36950ea94583d176",
     "name": "small",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "smc-layout/small": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "smc-layout"
   },
   {
     "id": "5fe081abdb8819274258d0e09d74425099509d8d",
     "name": "medium",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "smc-layout/medium": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "smc-layout"
   },
   {
     "id": "d5fd5c27178353204896f14872f0dff5460cde0e",
     "name": "large",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "smc-layout/large": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "smc-layout"
   },
   {
     "id": "f240f921b8eef4e4df4e985bb104f6ebfefbf976",
     "name": "xlarge",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "smc-layout/xlarge": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "smc-layout"
   },
   {
     "id": "6eec860144a999644bb5a7848f332b578a768299",
     "name": "component",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-colors/light": "source",
-      "smc-reference/smc-reference": "source",
-      "comp-color/component": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "comp-color"
   },
   {
     "id": "0233082326a6844a647dcf26cd03022cbe6a2a40",
     "name": "dense",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "comp-size/dense": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "comp-size"
   },
   {
     "id": "d968f45f975b6d9df893d69368c338aff9b293bf",
     "name": "compact",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "comp-size/compact": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "comp-size"
   },
   {
     "id": "796778812d056cfeb435de55381059bc5e7fbf22",
     "name": "comfortable",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "comp-size/comfortable": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "comp-size"
   },
   {
     "id": "8402bbbac8421de656348476fbbed850c97f1202",
     "name": "spacious",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "base/base": "source",
-      "smc-reference/smc-reference": "source",
-      "comp-size/spacious": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "comp-size"
   }
 ]
