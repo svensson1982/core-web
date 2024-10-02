@@ -65,7 +65,7 @@
               "type": "number"
             },
             "icon": {
-              "value": "{smc.reference.container.icon-nested.sm}",
+              "value": "{smc.reference.icon.xs}",
               "type": "number"
             },
             "height": {
@@ -95,7 +95,7 @@
               "type": "number"
             },
             "icon": {
-              "value": "{smc.reference.container.icon-nested.sm}",
+              "value": "{smc.reference.icon.2xl}",
               "type": "number"
             },
             "height": {
