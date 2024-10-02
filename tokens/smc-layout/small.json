@@ -76,5 +76,91 @@
         }
       }
     }
+  },
+  "typography": {
+    "display": {
+      "font-family": {
+        "value": "{typography.font-family.default}",
+        "type": "text"
+      },
+      "font-size": {
+        "value": "{typography.font-size.24}",
+        "type": "number"
+      },
+      "line-height": {
+        "value": "{typography.line-height.24}",
+        "type": "number"
+      },
+      "letter-spacing": {
+        "value": "{typography.letter-spacing.default}",
+        "type": "number"
+      }
+    },
+    "headline": {
+      "font-family": {
+        "value": "{typography.font-family.default}",
+        "type": "text"
+      },
+      "font-size": {
+        "value": "{typography.font-size.20}",
+        "type": "number"
+      },
+      "line-height": {
+        "value": "{typography.line-height.20}",
+        "type": "number"
+      },
+      "letter-spacing": {
+        "value": "{typography.letter-spacing.default}",
+        "type": "number"
+      }
+    },
+    "body": {
+      "font-family": {
+        "value": "{typography.font-family.default}",
+        "type": "text"
+      },
+      "font-size": {
+        "value": "{typography.font-size.12}",
+        "type": "number"
+      },
+      "line-height": {
+        "value": "{typography.line-height.20}",
+        "type": "number"
+      },
+      "letter-spacing": {
+        "value": "{typography.letter-spacing.default}",
+        "type": "number"
+      }
+    },
+    "caption": {
+      "font-family": {
+        "value": "{typography.font-family.default}",
+        "type": "text"
+      },
+      "font-size": {
+        "value": "{typography.font-size.8}",
+        "type": "number"
+      },
+      "line-height": {
+        "value": "{typography.line-height.10}",
+        "type": "number"
+      },
+      "letter-spacing": {
+        "value": "{typography.letter-spacing.default}",
+        "type": "number"
+      }
+    },
+    "iconset": {
+      "default": {
+        "font-size": {
+          "value": "{typography.font-size.12}",
+          "type": "number"
+        },
+        "line-height": {
+          "value": "{typography.line-height.12}",
+          "type": "number"
+        }
+      }
+    }
   }
 }
