@@ -139,6 +139,24 @@
                     "value": "{smc.reference.container.size.height.20}",
                     "type": "number"
                   }
+                },
+                "typography": {
+                  "font-family": {
+                    "value": "{smc.reference.typography.iconset.default}",
+                    "type": "text"
+                  },
+                  "font-size": {
+                    "value": "{smc.reference.typography.font-size.20}",
+                    "type": "number"
+                  },
+                  "font-weight": {
+                    "value": "{smc.reference.typography.font-weight.Regular}",
+                    "type": "number"
+                  },
+                  "line-height": {
+                    "value": "{smc.reference.typography.line-height.20}",
+                    "type": "number"
+                  }
                 }
               },
               "trailing-icon": {
@@ -149,6 +167,24 @@
                   },
                   "height": {
                     "value": "{smc.reference.container.size.height.20}",
+                    "type": "number"
+                  }
+                },
+                "typography": {
+                  "font-family": {
+                    "value": "{smc.reference.typography.iconset.default}",
+                    "type": "text"
+                  },
+                  "font-size": {
+                    "value": "{smc.reference.typography.font-size.20}",
+                    "type": "number"
+                  },
+                  "font-weight": {
+                    "value": "{smc.reference.typography.font-weight.Regular}",
+                    "type": "number"
+                  },
+                  "line-height": {
+                    "value": "{smc.reference.typography.line-height.20}",
                     "type": "number"
                   }
                 }
