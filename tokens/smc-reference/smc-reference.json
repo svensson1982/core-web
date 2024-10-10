@@ -3667,15 +3667,27 @@
           "type": "number"
         },
         "lg": {
-          "value": "{base.dimension.320}",
+          "value": "{base.dimension.280}",
           "type": "number"
         },
         "xl": {
-          "value": "{base.dimension.400}",
+          "value": "{base.dimension.320}",
           "type": "number"
         },
         "2xs": {
           "value": "{base.dimension.120}",
+          "type": "number"
+        },
+        "2xl": {
+          "value": "{base.dimension.400}",
+          "type": "number"
+        },
+        "3xl": {
+          "value": "{base.dimension.440}",
+          "type": "number"
+        },
+        "4xl": {
+          "value": "{base.dimension.560}",
           "type": "number"
         }
       }
