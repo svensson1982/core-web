@@ -1196,12 +1196,12 @@
           "value": "Montserrat",
           "type": "text"
         },
-        "MaterialIcons": {
-          "value": "Material Icons",
+        "IdsFonticon": {
+          "value": "I-DS-font-icon-default",
           "type": "text"
         },
-        "FontAwesome": {
-          "value": "Font Awesome 5 Free",
+        "MaterialIcons": {
+          "value": "I-DS-font-icon-material",
           "type": "text"
         }
       },

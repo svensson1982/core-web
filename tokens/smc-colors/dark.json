@@ -1,6 +1,6 @@
 {
   "smc": {
-    "color": {
+    "colors": {
       "surface": {
         "lighter-10": {
           "value": "{base.color.dark}",
@@ -156,9 +156,55 @@
           "value": "{base.color.Custom.100}",
           "type": "color"
         },
-        "fixed": {
+        "variant": {
           "darker-50": {
             "value": "{smc.reference.page.color.bg.light.darker-100}",
+            "type": "color"
+          }
+        },
+        "fixed": {
+          "lighter-50": {
+            "value": "{base.color.Custom.50}",
+            "type": "color"
+          },
+          "lighter-40": {
+            "value": "{base.color.Custom.100}",
+            "type": "color"
+          },
+          "lighter-30": {
+            "value": "{base.color.Custom.200}",
+            "type": "color"
+          },
+          "lighter-20": {
+            "value": "{base.color.Custom.300}",
+            "type": "color"
+          },
+          "lighter-10": {
+            "value": "{base.color.Custom.400}",
+            "type": "color"
+          },
+          "default": {
+            "value": "{base.color.Custom.500}",
+            "type": "color"
+          },
+          "darker-10": {
+            "value": "{base.color.Custom.600}",
+            "type": "color"
+          },
+          "darker-20": {
+            "value": "{base.color.Custom.700}",
+            "type": "color"
+          },
+          "darker-30": {
+            "value": "{base.color.Custom.800}",
+            "type": "color"
+          },
+          "darker-40": {
+            "value": "{base.color.Custom.900}",
+            "type": "color"
+          },
+          "darker-50": {
+            "value": "{base.color.Custom.950}",
             "type": "color"
           }
         }
@@ -195,6 +241,64 @@
         "darker-30": {
           "value": "{base.color.Slate.100}",
           "type": "color"
+        },
+        "lighter-50": {
+          "value": "{base.color.Slate.950}",
+          "type": "color"
+        },
+        "darker-40": {
+          "value": "{base.color.Slate.100}",
+          "type": "color"
+        },
+        "darker-50": {
+          "value": "{base.color.Slate.50}",
+          "type": "color"
+        },
+        "fixed": {
+          "lighter-50": {
+            "value": "{base.color.Slate.50}",
+            "type": "color"
+          },
+          "lighter-40": {
+            "value": "{base.color.Slate.100}",
+            "type": "color"
+          },
+          "lighter-30": {
+            "value": "{base.color.Slate.200}",
+            "type": "color"
+          },
+          "lighter-20": {
+            "value": "{base.color.Slate.300}",
+            "type": "color"
+          },
+          "lighter-10": {
+            "value": "{base.color.Slate.400}",
+            "type": "color"
+          },
+          "default": {
+            "value": "{base.color.Slate.500}",
+            "type": "color"
+          },
+          "darker-10": {
+            "value": "{base.color.Slate.600}",
+            "type": "color"
+          },
+          "darker-20": {
+            "value": "{base.color.Slate.700}",
+            "type": "color"
+          },
+          "darker-30": {
+            "value": "{base.color.Slate.800}",
+            "type": "color"
+          },
+          "darker-40": {
+            "value": "{base.color.Slate.900}",
+            "type": "color"
+          },
+          "darker-50": {
+            "value": "{base.color.Slate.950}",
+            "type": "color"
+          }
         }
       },
       "brand": {
@@ -229,6 +333,64 @@
         "darker-30": {
           "value": "{base.color.Custom.100}",
           "type": "color"
+        },
+        "lighter-50": {
+          "value": "{base.color.Custom.950}",
+          "type": "color"
+        },
+        "darker-40": {
+          "value": "{base.color.Custom.100}",
+          "type": "color"
+        },
+        "darker-50": {
+          "value": "{base.color.Custom.50}",
+          "type": "color"
+        },
+        "fixed": {
+          "lighter-50": {
+            "value": "{base.color.Custom.50}",
+            "type": "color"
+          },
+          "lighter-40": {
+            "value": "{base.color.Custom.100}",
+            "type": "color"
+          },
+          "lighter-30": {
+            "value": "{base.color.Custom.200}",
+            "type": "color"
+          },
+          "lighter-20": {
+            "value": "{base.color.Custom.300}",
+            "type": "color"
+          },
+          "lighter-10": {
+            "value": "{base.color.Custom.400}",
+            "type": "color"
+          },
+          "default": {
+            "value": "{base.color.Custom.500}",
+            "type": "color"
+          },
+          "darker-10": {
+            "value": "{base.color.Custom.600}",
+            "type": "color"
+          },
+          "darker-20": {
+            "value": "{base.color.Custom.700}",
+            "type": "color"
+          },
+          "darker-30": {
+            "value": "{base.color.Custom.800}",
+            "type": "color"
+          },
+          "darker-40": {
+            "value": "{base.color.Custom.900}",
+            "type": "color"
+          },
+          "darker-50": {
+            "value": "{base.color.Custom.950}",
+            "type": "color"
+          }
         }
       },
       "error": {
@@ -263,11 +425,23 @@
         "darker-30": {
           "value": "{base.color.Red.100}",
           "type": "color"
+        },
+        "lighter-50": {
+          "value": "{base.color.Red.950}",
+          "type": "color"
+        },
+        "darker-40": {
+          "value": "{base.color.Red.100}",
+          "type": "color"
+        },
+        "darker-50": {
+          "value": "{base.color.Red.50}",
+          "type": "color"
         }
       },
       "success": {
-        "lighter-40": {
-          "value": "{base.color.Green.900}",
+        "lighter-50": {
+          "value": "{base.color.Green.950}",
           "type": "color"
         },
         "lighter-30": {
@@ -296,6 +470,18 @@
         },
         "darker-30": {
           "value": "{base.color.Green.100}",
+          "type": "color"
+        },
+        "lighter-40": {
+          "value": "{base.color.Green.900}",
+          "type": "color"
+        },
+        "darker-40": {
+          "value": "{base.color.Green.100}",
+          "type": "color"
+        },
+        "darker-50": {
+          "value": "{base.color.Green.50}",
           "type": "color"
         }
       },
@@ -331,6 +517,18 @@
         "darker-30": {
           "value": "{base.color.Orange.100}",
           "type": "color"
+        },
+        "lighter-50": {
+          "value": "{base.color.Orange.950}",
+          "type": "color"
+        },
+        "darker-40": {
+          "value": "{base.color.Orange.100}",
+          "type": "color"
+        },
+        "darker-50": {
+          "value": "{base.color.Orange.50}",
+          "type": "color"
         }
       },
       "info": {
@@ -364,6 +562,18 @@
         },
         "darker-30": {
           "value": "{base.color.Blue.100}",
+          "type": "color"
+        },
+        "lighter-50": {
+          "value": "{base.color.Blue.950}",
+          "type": "color"
+        },
+        "darker-40": {
+          "value": "{base.color.Blue.100}",
+          "type": "color"
+        },
+        "darker-50": {
+          "value": "{base.color.Blue.50}",
           "type": "color"
         }
       },
