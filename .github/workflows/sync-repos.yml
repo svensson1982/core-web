@@ -10,17 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout core-foundation repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Set up Git authentication
+      - name: Set up Git authentication for core-web repository
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push changes to core-web repository
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
           cd core-web
           
           # Fetch all branches from the core-web repo
@@ -35,4 +36,3 @@ jobs:
           
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
