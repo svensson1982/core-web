@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout core-foundation repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # get the full history
 
       - name: Set up Git authentication for core-web repository
         run: |
@@ -29,8 +31,13 @@ jobs:
           
           # Iterate over each branch and merge the changes from ids-core-foundation main branch
           for branch in $(git for-each-ref --format '%(refname:short)' refs/heads/); do
+              echo "Checking out branch: $branch"
               git checkout $branch
-              git pull https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main
+              
+              echo "Pulling changes from ids-core-foundation/main into $branch"
+              git pull --no-rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main
+              
+              echo "Pushing merged changes to origin/$branch"
               git push origin $branch
           done
           
