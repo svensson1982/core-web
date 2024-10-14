@@ -35,8 +35,8 @@ jobs:
               git checkout $branch
               
               echo "Pulling changes from ids-core-foundation/main into $branch"
-              git pull --allow-unrelated-histories https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main
-              
+              git pull --strategy-option=theirs https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main --rebase=false
+
               echo "Pushing merged changes to origin/$branch"
               git push origin $branch
           done
