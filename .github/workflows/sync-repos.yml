@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout core-foundation repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0  # get the full history
 
@@ -35,7 +35,7 @@ jobs:
               git checkout $branch
               
               echo "Pulling changes from ids-core-foundation/main into $branch"
-              git pull --no-rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main
+              git pull --allow-unrelated-histories https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main
               
               echo "Pushing merged changes to origin/$branch"
               git push origin $branch
