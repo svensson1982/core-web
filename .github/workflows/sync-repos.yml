@@ -1,0 +1,31 @@
+name: Sync Repos
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout core-foundation repository
+        uses: actions/checkout@v3
+
+      - name: Push changes to core-web repository
+        run: |
+          git clone https://github.com/svensson1982/core-web.git
+          cd core-web
+          
+          # Fetch all branches from the core-web repo
+          git fetch --all
+          
+          # Iterate over each branch and merge the changes from core-foundation main branch
+          for branch in $(git for-each-ref --format '%(refname:short)' refs/heads/); do
+              git checkout $branch
+              git pull https://github.com/svensson1982/core-foundation.git main
+              git push origin $branch
+          done
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
