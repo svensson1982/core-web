@@ -30,7 +30,7 @@ jobs:
           # Iterate over each branch and merge the changes from core-foundation main branch
           for branch in $(git for-each-ref --format '%(refname:short)' refs/heads/); do
               git checkout $branch
-              git pull https://github.com/svensson1982/core-foundation.git main
+              git pull https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-foundation.git main
               git push origin $branch
           done
           
