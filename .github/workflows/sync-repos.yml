@@ -12,9 +12,15 @@ jobs:
       - name: Checkout core-foundation repository
         uses: actions/checkout@v3
 
+      - name: Set up Git authentication
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
+
       - name: Push changes to core-web repository
         run: |
-          git clone https://github.com/svensson1982/core-web.git
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
           cd core-web
           
           # Fetch all branches from the core-web repo
@@ -29,3 +35,4 @@ jobs:
           
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
