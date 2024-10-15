@@ -1,1 +1,1 @@
-This repository contains the tokens of the I-DS core web components. Each branch stores a independent component. Do not merge the braches to the main, always keep them so designers can push updates from figma.
+I-DS core foundation stores the root tokens for all different development platforms such as web, android and ios

@@ -1,0 +1,46 @@
+name: Sync Repos
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout core-foundation repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # get the full history
+
+      - name: Set up Git authentication for core-web repository
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          # git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
+          git clone https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-web.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push changes to core-web repository
+        run: |
+          cd core-web
+          
+          # Fetch all branches from the core-web repo
+          git fetch --all
+          
+          # Iterate over each branch and merge the changes from ids-core-foundation main branch
+          for branch in $(git for-each-ref --format '%(refname:short)' refs/heads/); do
+              echo "Checking out branch: $branch"
+              git checkout $branch
+              
+              echo "Pulling changes from ids-core-foundation/main into $branch"
+              git pull --strategy-option=theirs --allow-unrelated-histories https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main --rebase=false
+
+              echo "Pushing merged changes to origin/$branch"
+              git push origin $branch
+          done
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
