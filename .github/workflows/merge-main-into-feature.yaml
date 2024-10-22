@@ -46,6 +46,8 @@ jobs:
             echo "Merging main into $branch"
             git checkout $branch
             
+            echo "branch name: $branch"
+
             # Pull the latest changes for the branch to ensure it's up to date
             git pull origin $branch
             
