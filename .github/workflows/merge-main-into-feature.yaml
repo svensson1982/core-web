@@ -55,13 +55,13 @@ jobs:
             echo "$branches"
           fi
 
-      # Step 6: Iterate through all feature branches and merge main into each
-      - name: Merge main into all feature branches
+      # Step 6: Iterate through all feature branches and merge tokens directory from main into each
+      - name: Merge tokens directory from main into all feature branches
         run: |
           # Iterate through remote feature branches
           for branch in $(git branch -r | grep -v 'origin/main'); do
             branch_name=$(echo $branch | sed 's|origin/||')  # Remove 'origin/' prefix
-            echo "Merging main into $branch_name"
+            echo "Merging tokens directory from main into $branch_name"
             
             # Check out the remote branch
             git checkout -b $branch_name origin/$branch_name
@@ -69,15 +69,16 @@ jobs:
             # Pull the latest changes for the branch to ensure it's up to date
             git pull origin $branch_name
             
-            # Merge the changes from main
-            if git merge origin/main --no-ff --no-edit; then
-              echo "Merged main into $branch_name successfully."
+            # Copy only the tokens directory from main to the current branch
+            git checkout origin/main -- tokens/
+            
+            # Check if there are any changes to commit
+            if [[ $(git status --porcelain) ]]; then
+              echo "Changes detected in tokens directory."
+              git add tokens/
+              git commit -m "Merged tokens directory from main into $branch_name"
               git push origin $branch_name || echo "Failed to push $branch_name"
             else
-              echo "Conflict in $branch_name, manual resolution needed."
-              # List conflicting files
-              echo "Conflicting files:"
-              git diff --name-only --diff-filter=U
-              exit 1  # Exit the workflow with an error
+              echo "No changes in tokens directory for $branch_name."
             fi
           done
