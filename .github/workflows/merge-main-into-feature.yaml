@@ -1,0 +1,38 @@
+name: Merge Main into Feature Branches
+
+on:
+  push:
+    branches:
+      - main  # Trigger when changes are pushed to main
+
+jobs:
+  merge-main:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all branches
+
+      # Step 2: Set up Git user info
+      - name: Set up Git user
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
+      # Step 3: Fetch all branches
+      - name: Fetch all branches
+        run: git fetch --all
+
+      # Step 4: Iterate through all branches and merge main into each
+      - name: Merge main into all feature branches
+        run: |
+          # Get a list of all branches (excluding main)
+          for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v '^main$'); do
+            echo "Merging main into $branch"
+            git checkout $branch
+            git merge origin/main --no-ff --no-edit || echo "Conflict in $branch, manual resolution needed"
+            git push origin $branch || echo "Failed to push $branch"
+          done
