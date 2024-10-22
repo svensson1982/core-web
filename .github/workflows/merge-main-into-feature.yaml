@@ -40,6 +40,7 @@ jobs:
       # Step 3: Fetch all remote branches
       - name: iterate all remote branches
         run: |
+          echo git branch -a
           for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
             echo branch="${branch}"
           done
