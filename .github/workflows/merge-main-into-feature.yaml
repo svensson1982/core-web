@@ -37,6 +37,11 @@ jobs:
       #       git push origin $branch || echo "Failed to push $branch"
       #     done
 
+      # Step 3: Fetch all remote branches
+      - name: Fetch all remote branches
+        run: |
+          git fetch origin '+refs/heads/*:refs/heads/*'
+
       # Step 4: List and show all branches
       - name: Show all branches
         run: |
