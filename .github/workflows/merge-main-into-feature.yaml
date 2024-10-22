@@ -38,6 +38,11 @@ jobs:
       #     done
 
 
+      - name: Show feature branches
+        run: |
+          echo "Feature branches:"
+          git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v '^main$'
+
       # Step 4: Iterate through all branches and merge main into each
       - name: Merge main into all feature branches
         run: |
