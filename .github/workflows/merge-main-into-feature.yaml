@@ -37,17 +37,23 @@ jobs:
       #       git push origin $branch || echo "Failed to push $branch"
       #     done
 
+      # Step 4: List and show all branches
+      - name: Show all branches
+        run: |
+          echo "All branches:"
+          git for-each-ref --format='%(refname:short)' refs/heads/
+
 
       # Step 4: List and show feature branches
-      - name: Show feature branches
-        run: |
-          echo "Feature branches:"
-          branches=$(git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v '^main$' || true)
-          if [ -z "$branches" ]; then
-            echo "No feature branches found."
-          else
-            echo "$branches"
-          fi
+      # - name: Show feature branches
+      #   run: |
+      #     echo "Feature branches:"
+      #     branches=$(git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v '^main$' || true)
+      #     if [ -z "$branches" ]; then
+      #       echo "No feature branches found."
+      #     else
+      #       echo "$branches"
+      #     fi
 
       # Step 5: Iterate through all branches and merge main into each
       - name: Merge main into all feature branches
