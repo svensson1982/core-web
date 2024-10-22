@@ -1,0 +1,50 @@
+name: Sync Repos
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the core-foundation repository (Foundation repo)
+      - name: Checkout core-foundation repository
+        uses: actions/checkout@v4
+        with:
+          repository: svensson1982/ids-core-foundation  # specify foundation repo
+          ref: main  # checkout main branch
+          fetch-depth: 0  # get the full history
+
+      # Step 2: Set up Git authentication for core-web repository
+      - name: Set up Git authentication for core-web repository
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git clone https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-web.git
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+
+      # Step 3: Merge changes from core-foundation/main into core-web/main
+      - name: Merge core-foundation main into core-web main
+        run: |
+          cd core-web
+
+          # Fetch changes from core-web main
+          git checkout main
+          git pull origin main
+
+          # Add core-foundation as a remote and fetch its changes
+          git remote add foundation https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/ids-core-foundation.git
+          git fetch foundation
+
+          # Merge the changes from core-foundation/main into core-web/main
+          git merge foundation/main --allow-unrelated-histories -m "Merged core-foundation main into core-web main"
+
+          # Push the merged changes back to core-web main
+          git push origin main
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+        #this is the end  
