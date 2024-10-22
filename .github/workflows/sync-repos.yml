@@ -8,39 +8,42 @@ on:
 jobs:
   sync-repo:
     runs-on: ubuntu-latest
+
     steps:
+      # Step 1: Checkout the core-foundation repository (Foundation repo)
       - name: Checkout core-foundation repository
         uses: actions/checkout@v4
         with:
+          repository: svensson1982/ids-core-foundation  # specify foundation repo
+          ref: main  # checkout main branch
           fetch-depth: 0  # get the full history
 
+      # Step 2: Set up Git authentication for core-web repository
       - name: Set up Git authentication for core-web repository
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          # git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/core-web.git
           git clone https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-web.git
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_PAT: ${{ secrets.GIT_PAT }}
 
-      - name: Push changes to core-web repository
+      # Step 3: Merge changes from core-foundation/main into core-web/main
+      - name: Merge core-foundation main into core-web main
         run: |
           cd core-web
-          
-          # pull main from the core-web repo
-          git pull main
-          
-          # Iterate over each branch and merge the changes from ids-core-foundation main branch
-          #for branch in $(git for-each-ref --format '%(refname:short)' refs/heads/); do
-              echo "Checking out branch: $branch"
-              git checkout main
-              
-              echo "Pulling changes from ids-core-foundation/main into $branch"
-              git pull --strategy-option=theirs --allow-unrelated-histories https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/svensson1982/ids-core-foundation.git main --rebase=false
 
-              echo "Pushing merged changes to origin/$branch"
-              git push origin main
-          #done
-          
+          # Fetch changes from core-web main
+          git checkout main
+          git pull origin main
+
+          # Add core-foundation as a remote and fetch its changes
+          git remote add foundation https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/ids-core-foundation.git
+          git fetch foundation
+
+          # Merge the changes from core-foundation/main into core-web/main
+          git merge foundation/main --allow-unrelated-histories -m "Merged core-foundation main into core-web main"
+
+          # Push the merged changes back to core-web main
+          git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_PAT: ${{ secrets.GIT_PAT }}
