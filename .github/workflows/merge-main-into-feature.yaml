@@ -84,3 +84,7 @@ jobs:
               echo "No changes in tokens directory for $branch_name."
             fi
           done
+
+        env:
+          GIT_PAT: ${{ secrets.WEB_CORE_GIT_PAT }}
+        #this is the end  
