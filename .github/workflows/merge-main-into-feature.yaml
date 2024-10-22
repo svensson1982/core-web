@@ -57,25 +57,27 @@ jobs:
 
       # Step 6: Iterate through all feature branches and merge main into each
       - name: Merge main into all feature branches
-        run: |
-          # Iterate through remote feature branches
-          for branch in $(git branch -r | grep -v 'origin/main'); do
-            branch_name=$(echo $branch | sed 's|origin/||')  # Remove 'origin/' prefix
-            echo "Merging main into $branch_name"
-            
-            # Check out the remote branch
-            git checkout -b $branch_name origin/$branch_name
-            
-            # Pull the latest changes for the branch to ensure it's up to date
-            git pull origin $branch_name
-            
-            # Merge the changes from main
-            git merge origin/main --no-ff --no-edit
-            
-            # Check if the merge was successful before pushing
-            if [ $? -eq 0 ]; then
-              git push origin $branch_name || echo "Failed to push $branch_name"
-            else
-              echo "Conflict in $branch_name, manual resolution needed"
-            fi
-          done
+      run: |
+        # Iterate through remote feature branches
+        for branch in $(git branch -r | grep -v 'origin/main'); do
+          branch_name=$(echo $branch | sed 's|origin/||')  # Remove 'origin/' prefix
+          echo "Merging main into $branch_name"
+          
+          # Check out the remote branch
+          git checkout -b $branch_name origin/$branch_name
+          
+          # Pull the latest changes for the branch to ensure it's up to date
+          git pull origin $branch_name
+          
+          # Merge the changes from main
+          if git merge origin/main --no-ff --no-edit; then
+            echo "Merged main into $branch_name successfully."
+            git push origin $branch_name || echo "Failed to push $branch_name"
+          else
+            echo "Conflict in $branch_name, manual resolution needed."
+            # List conflicting files
+            echo "Conflicting files:"
+            git diff --name-only --diff-filter=U
+            exit 1  # Exit the workflow with an error
+          fi
+        done
