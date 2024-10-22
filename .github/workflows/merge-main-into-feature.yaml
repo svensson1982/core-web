@@ -37,10 +37,15 @@ jobs:
       #       git push origin $branch || echo "Failed to push $branch"
       #     done
 
+        
+      - name: Show all branches
+        run: |
+          echo "All branches:"
+          git branch -a  # List all local and remote branches
+
       # Step 3: Fetch all remote branches
       - name: iterate all remote branches
         run: |
-          echo git branch -a
           for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
             echo branch="${branch}"
           done
