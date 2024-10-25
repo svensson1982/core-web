@@ -1,0 +1,83 @@
+[
+  {
+    "id": "dbaaae1cfb675d5d79da8488e0326af5537e1b88",
+    "name": "base",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "enabled"
+    }
+  },
+  {
+    "id": "e6870cc14673e55f2e18e548b46953f9c1977607",
+    "name": "smc-reference",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "smc-reference/smc-reference": "enabled",
+      "base/base": "source"
+    }
+  },
+  {
+    "id": "2b049d7ecffeb6a1128b02f2808cf64baae05e2b",
+    "name": "light",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "source",
+      "smc-colors/light": "enabled"
+    },
+    "group": "smc-colors"
+  },
+  {
+    "id": "6edec0db3cdce42cd136b27977a6befc9a49e383",
+    "name": "dark",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "source",
+      "smc-colors/dark": "enabled"
+    },
+    "group": "smc-colors"
+  },
+  {
+    "id": "a758d05c9df29844ab4de21304e341e2102951be",
+    "name": "small",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "source",
+      "smc-reference/smc-reference": "source",
+      "smc-layout/small": "enabled"
+    },
+    "group": "smc-layout"
+  },
+  {
+    "id": "8f40d15b32c3d499d1777f4c7c3a4c348c5e6c4a",
+    "name": "medium",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "source",
+      "smc-reference/smc-reference": "source",
+      "smc-layout/medium": "enabled"
+    },
+    "group": "smc-layout"
+  },
+  {
+    "id": "6355f90ab495b34c24204036ac475e7541f10df9",
+    "name": "large",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "source",
+      "smc-reference/smc-reference": "source",
+      "smc-layout/large": "enabled"
+    },
+    "group": "smc-layout"
+  },
+  {
+    "id": "ce361b1b5c43e3c0bec84301a31963479d5dd58f",
+    "name": "xlarge",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "base/base": "enabled",
+      "smc-reference/smc-reference": "enabled",
+      "smc-layout/xlarge": "enabled"
+    },
+    "group": "smc-layout"
+  }
+]

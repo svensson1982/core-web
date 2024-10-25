@@ -1,0 +1,80 @@
+{
+  "smc": {
+    "layout": {
+      "typography": {
+        "display": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.48}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.48}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        },
+        "heading": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.28}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.28}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        },
+        "body": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.16}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.24}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        },
+        "caption": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.12}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.14}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}
