@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the core-foundation repository (Foundation repo)
-      - name: Checkout core-foundation repository
+      # Step 1: Checkout only the tokens directory from core-foundation repository
+      - name: Checkout core-foundation repository with sparse checkout
         uses: actions/checkout@v4
         with:
-          repository: svensson1982/core-foundation  # specify foundation repo
-          ref: main  # checkout main branch
-          fetch-depth: 0  # get the full history
+          repository: svensson1982/core-foundation
+          ref: main
+          fetch-depth: 0
           sparse-checkout: tokens
 
       # Step 2: Set up Git authentication for core-web repository
@@ -28,7 +28,7 @@ jobs:
         env:
           GIT_PAT: ${{ secrets.GIT_PAT }}
 
-      # Step 3: Merge changes from core-foundation/main into core-web/main
+      # Step 3: Merge changes from core-foundation/main into core-web/main, preferring core-foundation in conflicts
       - name: Merge core-foundation main into core-web main
         run: |
           cd core-web
@@ -41,11 +41,10 @@ jobs:
           git remote add foundation https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-foundation.git
           git fetch foundation
 
-          # Merge the changes from core-foundation/main into core-web/main
-          git merge foundation/main --allow-unrelated-histories -m "Merged core-foundation main into core-web main"
+          # Merge the changes from core-foundation/main into core-web/main, resolving conflicts in favor of core-foundation
+          git merge foundation/main --allow-unrelated-histories -X theirs -m "Merged core-foundation main into core-web main, resolved conflicts by preferring core-foundation"
 
           # Push the merged changes back to core-web main
           git push origin main
         env:
           GIT_PAT: ${{ secrets.GIT_PAT }}
-        #this is the end  
