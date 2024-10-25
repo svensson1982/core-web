@@ -8,7 +8,7 @@
             "type": "text"
           },
           "font-size": {
-            "value": "{smc.reference.typography.font-size.49}",
+            "value": "{smc.reference.typography.font-size.48}",
             "type": "number"
           },
           "line-height": {
