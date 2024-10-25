@@ -46,6 +46,9 @@ jobs:
           # Merge the changes from core-foundation/main into core-web/main, resolving conflicts in favor of core-foundation
           git merge foundation/main --allow-unrelated-histories -X theirs -m "Merged core-foundation main into core-web main, resolved conflicts by preferring core-foundation"
 
+          # Remove the Action YAML file to prevent it from being pushed
+          git checkout HEAD -- .github/workflows/sync-repos.yml
+
           # Push the merged changes back to core-web main
           git push origin main
         env:
