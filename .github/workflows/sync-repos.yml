@@ -42,7 +42,7 @@ jobs:
           git fetch foundation
 
           # Merge the changes from core-foundation/main into core-web/main
-          git merge foundation/main --allow-unrelated-histories -m "Merged core-foundation main into core-web main"
+          git merge foundation/main --allow-unrelated-histories -X theirs -m "Merged core-foundation main into core-web main"
 
           # Push the merged changes back to core-web main
           git push origin main
