@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+      paths:
+      - '**'
+      - '!sub-project/docs/**'
 
 jobs:
   sync-repo:
@@ -17,7 +20,7 @@ jobs:
           repository: svensson1982/core-foundation
           ref: main
           fetch-depth: 0
-          sparse-checkout: tokens
+          path: tokens
 
       # Step 2: Set up Git authentication for core-web repository
       - name: Set up Git authentication for core-web repository
