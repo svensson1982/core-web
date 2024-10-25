@@ -2,8 +2,11 @@ name: Sync Repos
 
 on:
   push:
-    branches: ['main']
-    paths: ['tokens/**']
+    branches: 
+      - 'main'      
+    paths: 
+      - 'tokens/**'
+      - '!.github/**'
 
 jobs:
   sync-repo:
@@ -47,3 +50,4 @@ jobs:
           git push origin main
         env:
           GIT_PAT: ${{ secrets.GIT_PAT }}
+        #end
