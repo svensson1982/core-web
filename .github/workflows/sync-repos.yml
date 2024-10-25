@@ -2,8 +2,10 @@ name: Sync Repos
 
 on:
   push:
-    branches: 'main'
-    paths-ignore: '.github/**'
+    branches: 
+      - 'main'
+    paths-ignore: 
+      - '.github/**'
     paths: ['tokens/**']
 
 jobs:
