@@ -1,0 +1,50 @@
+name: Sync Repos
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout only the tokens directory from core-foundation repository
+      - name: Checkout core-foundation repository with sparse checkout
+        uses: actions/checkout@v4
+        with:
+          repository: svensson1982/core-foundation
+          ref: main
+          fetch-depth: 0
+          sparse-checkout: tokens
+
+      # Step 2: Set up Git authentication for core-web repository
+      - name: Set up Git authentication for core-web repository
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git clone https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-web.git
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+
+      # Step 3: Merge changes from core-foundation/main into core-web/main, preferring core-foundation in conflicts
+      - name: Merge core-foundation main into core-web main
+        run: |
+          cd core-web
+
+          # Fetch changes from core-web main
+          git checkout main
+          git pull origin main
+
+          # Add core-foundation as a remote and fetch its changes
+          git remote add foundation https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-foundation.git
+          git fetch foundation
+
+          # Merge the changes from core-foundation/main into core-web/main, resolving conflicts in favor of core-foundation
+          git merge foundation/main --allow-unrelated-histories -X theirs -m "Merged core-foundation main into core-web main, resolved conflicts by preferring core-foundation"
+
+          # Push the merged changes back to core-web main
+          git push origin main
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
