@@ -14,7 +14,7 @@ jobs:
       - name: Checkout core-foundation repository
         uses: actions/checkout@v4
         with:
-          repository: svensson1982/ids-core-foundation  # specify foundation repo
+          repository: svensson1982/core-foundation  # specify foundation repo
           ref: main  # checkout main branch
           fetch-depth: 0  # get the full history
           sparse-checkout: tokens
@@ -38,7 +38,7 @@ jobs:
           git pull origin main
 
           # Add core-foundation as a remote and fetch its changes
-          git remote add foundation https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/ids-core-foundation.git
+          git remote add foundation https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-foundation.git
           git fetch foundation
 
           # Merge the changes from core-foundation/main into core-web/main
