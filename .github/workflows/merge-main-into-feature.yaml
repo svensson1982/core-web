@@ -50,6 +50,14 @@ jobs:
             echo "$branches"
           fi
 
+      - name: Configure Git Authentication
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-web.git
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+
       - name: Merge tokens directory from main into all feature branches
         run: |
           # Iterate through remote feature branches
