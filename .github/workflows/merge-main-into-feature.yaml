@@ -73,12 +73,12 @@ jobs:
               git commit -m "Merged tokens directory from main into $branch_name"
               
               # Push changes using PAT for authentication
-              git push https://x-access-token:${{ secrets.WEB_CORE_GIT_PAT  }}@github.com/svensson1982/core-web.git $branch_name || echo "Failed to push $branch_name"
+              git push https://x-access-token:${{ secrets.GIT_PAT  }}@github.com/svensson1982/core-web.git $branch_name || echo "Failed to push $branch_name"
             else
               echo "No changes in tokens directory for $branch_name."
             fi
           done
 
         env:
-          GIT_PAT: ${{ secrets.WEB_CORE_GIT_PAT }}
+          GIT_PAT: ${{ secrets.GIT_PAT }}
         #this is the end  
