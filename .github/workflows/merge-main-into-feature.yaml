@@ -54,9 +54,9 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GIT_PAT }}@github.com/svensson1982/core-web.git
+          git remote set-url origin https://x-access-token:${{ secrets.WB_GIT_PAT }}@github.com/svensson1982/core-web.git
         env:
-          GIT_PAT: ${{ secrets.GIT_PAT }}
+          GIT_PAT: ${{ secrets.WB_GIT_PAT }}
 
       - name: Merge tokens directory from main into all feature branches
         run: |
@@ -81,12 +81,12 @@ jobs:
               git commit -m "Merged tokens directory from main into $branch_name"
               
               # Push changes using PAT for authentication
-              git push https://x-access-token:${{ secrets.GIT_PAT  }}@github.com/svensson1982/core-web.git $branch_name || echo "Failed to push $branch_name"
+              git push https://x-access-token:${{ secrets.WB_GIT_PAT  }}@github.com/svensson1982/core-web.git $branch_name || echo "Failed to push $branch_name"
             else
               echo "No changes in tokens directory for $branch_name."
             fi
           done
 
         env:
-          GIT_PAT: ${{ secrets.GIT_PAT }}
+          GIT_PAT: ${{ secrets.WB_GIT_PAT }}
         #this is the end  
