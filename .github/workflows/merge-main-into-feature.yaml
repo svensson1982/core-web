@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-
+env:
+    GIT_PAT: ${{ secrets.WB_GIT_PAT }}
 jobs:
   merge-main:
     runs-on: ubuntu-latest
@@ -86,7 +87,4 @@ jobs:
               echo "No changes in tokens directory for $branch_name."
             fi
           done
-
-        env:
-          GIT_PAT: ${{ secrets.WB_GIT_PAT }}
         #this is the end  
