@@ -3,26 +3,23 @@ name: Merge Main into Feature Branches
 on:
   push:
     branches:
-      - main  # Trigger when changes are pushed to main
+      - main
 
 jobs:
   merge-main:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout the repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch all branches
 
-      # Step 2: Set up Git user info
       - name: Set up Git user
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
 
-      # Step 3: Fetch all branches
       - name: Fetch all branches
         run: git fetch --all
 
@@ -37,14 +34,12 @@ jobs:
       #       git push origin $branch || echo "Failed to push $branch"
       #     done
 
-        
-      # Step 4: Show all branches
       - name: Show all branches
         run: |
           echo "All branches:"
           git branch -a  # List all local and remote branches
 
-      # Step 5: List and show feature branches
+      #this would be remove after testing    
       - name: Show feature branches
         run: |
           echo "Feature branches:"
@@ -55,7 +50,6 @@ jobs:
             echo "$branches"
           fi
 
-      # Step 6: Iterate through all feature branches and merge tokens directory from main into each
       - name: Merge tokens directory from main into all feature branches
         run: |
           # Iterate through remote feature branches
