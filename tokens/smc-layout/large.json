@@ -73,6 +73,42 @@
             "value": "{smc.reference.typography.letter-spacing.default}",
             "type": "number"
           }
+        },
+        "headline": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.28}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.32}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        },
+        "title": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.18}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.24}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
         }
       }
     }

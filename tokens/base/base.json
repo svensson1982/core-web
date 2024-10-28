@@ -1195,6 +1195,14 @@
         "Montserrat": {
           "value": "Montserrat",
           "type": "text"
+        },
+        "IdsFonticon": {
+          "value": "I-DS-font-icon-default",
+          "type": "text"
+        },
+        "MaterialIcons": {
+          "value": "I-DS-font-icon-material",
+          "type": "text"
         }
       },
       "weight": {

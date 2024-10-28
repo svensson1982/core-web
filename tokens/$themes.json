@@ -22,8 +22,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/light": "enabled",
-      "smc-reference/smc-reference": "source"
+      "smc-colors/light": "enabled"
     },
     "group": "smc-colors"
   },
@@ -33,8 +32,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/dark": "enabled",
-      "smc-reference/smc-reference": "source"
+      "smc-colors/dark": "enabled"
     },
     "group": "smc-colors"
   },
