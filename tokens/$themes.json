@@ -1212,6 +1212,8 @@
       "smc.reference.typography.font-size.24": "2c56fbbfdaf73c2bb83a8407c557b3b6e9098b45",
       "smc.reference.typography.font-size.28": "57b77e4ce8f1d551a7d4206a6716d8e1798bb949",
       "smc.reference.typography.font-size.32": "a31c17ad0c687576361052cc84b1e18c9699d4f3",
+      "smc.reference.typography.font-size.36": "4ed92cfaaa79d61d29ddbba3f786a0394f2de602",
+      "smc.reference.typography.font-size.40": "acca202158ccbddf961d85c2d5b5aba464b6e81c",
       "smc.reference.typography.font-size.48": "d54e9d9040b72239d294d0cfe3d2dc0e4f4df4b3",
       "smc.reference.typography.font-size.72": "a3e55f93245a796d644b6f8f83268abcef3c8976",
       "smc.reference.typography.line-height.10": "286ec9b2aecdad8fc321b9323606cc3213fd3e6a",
@@ -1224,6 +1226,8 @@
       "smc.reference.typography.line-height.28": "697031e47e047df30ff195fe0a00b6ea23d2bb24",
       "smc.reference.typography.line-height.32": "a70b674bc8b89268a4052bb0286288b8c25ff0ea",
       "smc.reference.typography.line-height.36": "a3211ebf1e3271eb785db3c0f3d51a9021832e96",
+      "smc.reference.typography.line-height.40": "ffb5fc05a31bd276e74de90c1a0f6e8caf13f34a",
+      "smc.reference.typography.line-height.44": "d86198fc0bace0a7b28722b6f5002f35aefa6888",
       "smc.reference.typography.line-height.48": "b979a697104fd35a6c674e72edbcc847f78a2fe4",
       "smc.reference.typography.line-height.72": "f9efeb1e3df756e9a0a5df388448ec4ad9427f2d",
       "smc.reference.typography.font-weight.Thin": "dbebd398bf49b0cf19c039235fecf9108b6e4100",
@@ -1264,9 +1268,9 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/light": "enabled"
+      "smc-colors/light": "enabled",
+      "smc-reference/smc-reference": "source"
     },
-    "group": "smc-colors",
     "$figmaCollectionId": "VariableCollectionId:2002:26188",
     "$figmaModeId": "2002:54",
     "$figmaVariableReferences": {
@@ -1470,7 +1474,8 @@
       "smc.colors.opacity.dark.800": "304e2c4278c2dacd134c06d3ef26614d94dd8996",
       "smc.colors.opacity.dark.900": "e408dcfedfe7ec784f920de3538d621f62214122",
       "smc.colors.opacity.dark.950": "3945b01ffa9ca02efce0b569d835baf940df96e2"
-    }
+    },
+    "group": "smc-colors"
   },
   {
     "id": "5274e541af355daf618ee85a455f8a75b8ee807b",
@@ -1478,9 +1483,9 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/dark": "enabled"
+      "smc-colors/dark": "enabled",
+      "smc-reference/smc-reference": "source"
     },
-    "group": "smc-colors",
     "$figmaCollectionId": "VariableCollectionId:2002:26188",
     "$figmaModeId": "2002:55",
     "$figmaVariableReferences": {
@@ -1684,7 +1689,8 @@
       "smc.colors.opacity.dark.800": "304e2c4278c2dacd134c06d3ef26614d94dd8996",
       "smc.colors.opacity.dark.900": "e408dcfedfe7ec784f920de3538d621f62214122",
       "smc.colors.opacity.dark.950": "3945b01ffa9ca02efce0b569d835baf940df96e2"
-    }
+    },
+    "group": "smc-colors"
   },
   {
     "id": "d0c88fc446022cc4e9575d7b36950ea94583d176",
