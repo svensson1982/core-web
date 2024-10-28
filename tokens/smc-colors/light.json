@@ -133,11 +133,11 @@
           "type": "color"
         },
         "default": {
-          "value": "{base.color.Custom.500}",
+          "value": "{base.color.Green.500}",
           "type": "color"
         },
         "darker-10": {
-          "value": "{base.color.Custom.600}",
+          "value": "{base.color.Green.600}",
           "type": "color"
         },
         "darker-20": {

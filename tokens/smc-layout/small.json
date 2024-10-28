@@ -8,11 +8,11 @@
             "type": "text"
           },
           "font-size": {
-            "value": "{smc.reference.typography.font-size.24}",
+            "value": "{smc.reference.typography.font-size.36}",
             "type": "number"
           },
           "line-height": {
-            "value": "{smc.reference.typography.line-height.24}",
+            "value": "{smc.reference.typography.line-height.36}",
             "type": "number"
           },
           "letter-spacing": {
@@ -67,6 +67,42 @@
           },
           "line-height": {
             "value": "{smc.reference.typography.line-height.10}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        },
+        "headline": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.20}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.24}",
+            "type": "number"
+          },
+          "letter-spacing": {
+            "value": "{smc.reference.typography.letter-spacing.default}",
+            "type": "number"
+          }
+        },
+        "title": {
+          "font-family": {
+            "value": "{smc.reference.typography.font-family.default}",
+            "type": "text"
+          },
+          "font-size": {
+            "value": "{smc.reference.typography.font-size.14}",
+            "type": "number"
+          },
+          "line-height": {
+            "value": "{smc.reference.typography.line-height.16}",
             "type": "number"
           },
           "letter-spacing": {
