@@ -13,7 +13,6 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/light": "source",
       "smc-reference/smc-reference": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:2002:26296",
@@ -833,6 +832,8 @@
       "smc.reference.typography.font-size.24": "9f3c693588285da5af860b69d27f4677e6f3e396",
       "smc.reference.typography.font-size.28": "68b54ffd2c375d4be977e9f1c804296de0ff40c1",
       "smc.reference.typography.font-size.32": "4524a6d819ac5e9af8fb75f8b81f1ec5b6717700",
+      "smc.reference.typography.font-size.36": "a24fde6bc75dc73a043b1486f80abc3c3520df01",
+      "smc.reference.typography.font-size.40": "876ef23be82c5f559969ca82882e7036c59782a9",
       "smc.reference.typography.font-size.48": "c25021018db2f2a072b8b88fc3d0fa217133f186",
       "smc.reference.typography.font-size.72": "0e9779531852ed2276ff584d72bd1f96b9205fb2",
       "smc.reference.typography.line-height.10": "9812c0193f02c5c3c0aa88c3d2605ab39180b180",
@@ -845,6 +846,8 @@
       "smc.reference.typography.line-height.28": "06934470c8fa806233bfb3f2385289c630c3f963",
       "smc.reference.typography.line-height.32": "b8a22b6b99328e714d10c812483a021a96fc7f0c",
       "smc.reference.typography.line-height.36": "087dff3fe8af6bb619cbae06f308f3180ed1a1c4",
+      "smc.reference.typography.line-height.40": "080835b93a75cb80cc47a1295705a826d902d5a8",
+      "smc.reference.typography.line-height.44": "7762e53f90f5acd58eb4ac520e9abc7f7b9c073f",
       "smc.reference.typography.line-height.48": "46c6bdee2de531ac58797f700ead0acae206308c",
       "smc.reference.typography.line-height.72": "941593083bb2a95cca697b5a79fa0d6d204eae74",
       "smc.reference.typography.font-weight.Thin": "a82636948d38baa1337bd8ed4ff0ad6c6190f352",
@@ -885,7 +888,8 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/light": "enabled"
+      "smc-colors/light": "enabled",
+      "smc-reference/smc-reference": "source"
     },
     "group": "smc-colors"
   },
@@ -895,7 +899,8 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "base/base": "source",
-      "smc-colors/dark": "enabled"
+      "smc-colors/dark": "enabled",
+      "smc-reference/smc-reference": "source"
     },
     "group": "smc-colors"
   },
