@@ -20,7 +20,7 @@
             "type": "number"
           }
         },
-        "headline": {
+        "heading": {
           "font-family": {
             "value": "{smc.reference.typography.font-family.default}",
             "type": "text"
@@ -72,18 +72,6 @@
           "letter-spacing": {
             "value": "{smc.reference.typography.letter-spacing.default}",
             "type": "number"
-          }
-        },
-        "iconset": {
-          "default": {
-            "font-size": {
-              "value": "{smc.reference.typography.font-size.24}",
-              "type": "number"
-            },
-            "line-height": {
-              "value": "{smc.reference.typography.line-height.24}",
-              "type": "number"
-            }
           }
         }
       }
